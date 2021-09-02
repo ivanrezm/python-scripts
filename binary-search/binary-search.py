@@ -31,7 +31,7 @@ def binarySearch(data, sortedList):
 			else:
 				return middle
 		return "No exist"
-	except ZeroDivisionError:
+	except:
 		return "Fail searching data"
 
 # Main
