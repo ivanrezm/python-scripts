@@ -24,9 +24,9 @@ def binarySearch(data, sortedList):
 		end = len(sortedList)
 		while start != end:
 			middle = start + (end - start) // 2
-			if sortedList[middle] > str(data):
+			if sortedList[middle] > data:
 				end = middle
-			elif sortedList[middle] < str(data):
+			elif sortedList[middle] < data:
 				start = middle + 1
 			else:
 				return middle
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 		print("You need put the number you want to search")
 		print(">> ./binary-search.py <numberToSearch>")
 	else:
-		dataToSearch = int(sys.argv[1])
+		dataToSearch = sys.argv[1]
 		dataList = readData(FILE)
 		position = binarySearch(dataToSearch, dataList)
 
